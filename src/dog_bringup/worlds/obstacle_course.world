@@ -1,0 +1,35 @@
+  <?xml version="1.0" ?>
+  <sdf version="1.6">
+  <world name="obstacle_course">
+  <include>
+  <uri>model://sun</uri>
+  </include>
+  <include>
+  <uri>model://ground_plane</uri>
+  </include>
+  <plugin name="gazebo_ros_factory" filename="libgazebo_ros_factory.so"/>
+  <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so"/>
+  <model name="field">
+  <static>true</static>
+  <pose>-7.04 4.15 -2.40 1.5708 0 0</pose>
+  <link name="link">
+  <collision name="collision">
+  <geometry>
+  <mesh>
+  <uri>file:///home/ubuntu/robocon_map/meshes/field.STL</uri>
+  <scale>0.001 0.001 0.001</scale>
+  </mesh>
+  </geometry>
+  </collision>
+  <visual name="visual">
+  <geometry>
+  <mesh>
+  <uri>file:///home/ubuntu/robocon_map/meshes/field.STL</uri>
+  <scale>0.001 0.001 0.001</scale>
+  </mesh>
+  </geometry>
+  </visual>
+  </link>
+  </model>
+  </world>
+  </sdf>
